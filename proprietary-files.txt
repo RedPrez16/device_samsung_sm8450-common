@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise, are
-## from OnePlus 10 Pro (NE2213_11.A.15).
+## from OnePlus 10 Pro (NE2215_11.C.19).
 
 # ACDBs
 vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.36_enpu2.pmd
@@ -740,7 +740,6 @@ odm/lib64/libhyperlapse.so
 odm/lib64/libmpbase.so
 odm/lib64/libop-ai-beauty-body-detection.so
 odm/lib64/libop-ai-beauty-faceretouch-cn.so
-odm/lib64/liboplusblur_capture_api.so
 odm/lib64/liboptical_zoom_dc.so
 odm/lib64/liboptical_zoom_vs.so
 odm/lib64/libormshalclient.so
@@ -818,7 +817,7 @@ vendor/lib64/camera/components/com.qti.stats.statsgenerator.so
 vendor/lib64/camera/components/com.qti.stats.tracker.so
 vendor/lib64/camera/components/libdepthmapwrapper_secure.so
 vendor/lib64/hw/camera.qcom.so
-vendor/lib64/hw/com.qti.chi.override.so|9191218f2ce6435c79af1a4a95ff996ad0a86a76|bd45f24d6d1757a509cbd23dd74174d518bad982
+vendor/lib64/hw/com.qti.chi.override.so|88baa0b8bdd295c54a562c163ca73130e3addbae|95ce0a790e02a889298636e149d6297780e42def
 vendor/lib64/com.qti.chiusecaseselector.so
 vendor/lib64/com.qti.feature2.anchorsync.so
 vendor/lib64/com.qti.feature2.demux.so
@@ -899,7 +898,7 @@ vendor/lib64/libsynx.so
 vendor/lib64/libtfestriping.so
 vendor/lib64/libthreadutils.so
 vendor/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
-vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so|acf6326ca4c5534e56ad222297dd1f8de19ea18f|41ff023bb72c65b38ded7f51c9be02fd9b653618
+vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 
 # Camera firmware
 vendor/firmware/CAMERA_ICP.elf

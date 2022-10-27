@@ -76,10 +76,8 @@ function blob_fixup() {
             "${PATCHELF}" --replace-needed "libui.so" "libui-v30.so" "${2}"
             ;;
         vendor/lib64/hw/com.qti.chi.override.so)
-            "${SIGSCAN}" -p "F0 35 05 94" -P "1F 20 03 D5" -f "${2}"
-            ;;
-        vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
-            "${SIGSCAN}" -p "23 0B 00 94" -P "1F 20 03 D5" -f "${2}"
+            "${SIGSCAN}" -p "D0 39 05 94" -P "1F 20 03 D5" -f "${2}"
+            "${SIGSCAN}" -p "2D 1F 04 94" -P "1F 20 03 D5" -f "${2}"
             ;;
     esac
 }
