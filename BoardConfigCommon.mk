@@ -7,7 +7,7 @@
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
-COMMON_PATH := device/oneplus/sm8450-common
+COMMON_PATH := device/samsung/sm8450-common
 
 # A/B
 AB_OTA_UPDATER := true
@@ -138,9 +138,9 @@ BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDOR_DLKMIMAGE_FILE_SYSTEM_TYPE := ext4
-BOARD_ONEPLUS_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor vendor_dlkm
-BOARD_ONEPLUS_DYNAMIC_PARTITIONS_SIZE := 5591007232
-BOARD_SUPER_PARTITION_GROUPS := oneplus_dynamic_partitions
+BOARD_samsung_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor vendor_dlkm
+BOARD_samsung_DYNAMIC_PARTITIONS_SIZE := 5591007232
+BOARD_SUPER_PARTITION_GROUPS := samsung_dynamic_partitions
 BOARD_SUPER_PARTITION_SIZE := 11190403072
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 TARGET_COPY_OUT_ODM := odm
@@ -220,4 +220,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Include the proprietary files BoardConfig.
-include vendor/oneplus/sm8450-common/BoardConfigVendor.mk
+include vendor/samsung/sm8450-common/BoardConfigVendor.mk

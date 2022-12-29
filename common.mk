@@ -22,6 +22,8 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
+    
+QCOM_BOARD_PLATFORMS:=taro
 
 # ANT+
 PRODUCT_PACKAGES += \
@@ -279,7 +281,7 @@ PRODUCT_PACKAGES += \
     libstagefrighthw
 
 # Overlays
-$(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
+#$(call inherit-product, hardware/samsung/overlay/qssi/qssi.mk)
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
@@ -288,8 +290,6 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
     FrameworksResTarget \
-    OPlusFrameworksResCommon \
-    OPlusSettingsResCommon \
     WifiResTarget
 
 # Partitions
@@ -303,8 +303,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.3.vendor
 
 # PowerShare
-PRODUCT_PACKAGES += \
-    vendor.lineage.powershare@1.0-service.oplus
+#PRODUCT_PACKAGES += \
+    #vendor.lineage.powershare@1.0-service.oplus
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -328,7 +328,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-service.multihal \
     libsensorndkbridge \
-    sensors.oplus
+
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
@@ -352,7 +352,7 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/oplus
+    hardware/samsung
 
 # Storage
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
@@ -388,9 +388,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
 
-# Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.oplus
+
 
 # Update engine
 PRODUCT_PACKAGES += \
@@ -420,9 +418,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
 
-# Vibrator
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.oplus
+
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
@@ -457,8 +453,10 @@ PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+
+#Platform
+PRODUCT_BOARD_PLATFORM := taro
+PRODUCT_USES_QCOM_HARDWARE := true
 
 # Inherit from the proprietary files makefile.
-$(call inherit-product, vendor/oneplus/sm8450-common/sm8450-common-vendor.mk)
+$(call inherit-product, vendor/samsung/sm8450-common/sm8450-common-vendor.mk)
